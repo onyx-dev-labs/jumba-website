@@ -51,7 +51,7 @@ export default function Footer() {
           <p>&copy; {new Date().getFullYear()} {settings?.company_name}. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex items-center gap-2">
             <span>Built by</span>
-            <span className="bg-slate-900 border border-slate-700 px-3 py-1 rounded-full text-primary font-bold">ONYX DEV LABS</span>
+            <span className="bg-slate-900 border border-slate-700 px-3 py-1 rounded-full text-primary font-bold">NYXUS DEV LABS</span>
           </div>
         </div>
       </div>
