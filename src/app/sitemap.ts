@@ -11,21 +11,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/services`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services`,
+      url: `${baseUrl}/gallery`, // This matches your actual link
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/projects`, // Or /gallery if that's what you call it
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'weekly', // Assuming you upload new photos often
       priority: 0.8,
     },
     {
@@ -34,10 +28,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.5,
     },
-    // If you have a blog or dynamic routes, you can add them like this:
-    // ...posts.map((post) => ({
-    //   url: `${baseUrl}/blog/${post.slug}`,
-    //   lastModified: post.date,
-    // })),
   ]
 }
