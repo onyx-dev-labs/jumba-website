@@ -13,12 +13,19 @@ export default function Footer() {
           <div className="bg-slate-800 p-8 rounded-2xl flex flex-col md:flex-row items-center gap-8 mb-12">
             {settings.owner_image_url && (
               <div className="relative w-32 h-32 flex-shrink-0">
-                <Image src={settings.owner_image_url} alt="Owner" fill className="rounded-full object-cover border-4 border-primary" />
+                <Image 
+                  src={settings.owner_image_url} 
+                  alt="Owner" 
+                  fill 
+                  className="rounded-full object-cover border-4 border-primary" 
+                />
               </div>
             )}
             <div className="text-center md:text-left">
               <h4 className="text-xl font-bold mb-1">{settings.owner_name}</h4>
-              <p className="text-primary text-sm uppercase font-bold tracking-wider mb-3">{settings.owner_role}</p>
+              <p className="text-primary text-sm uppercase font-bold tracking-wider mb-3">
+                {settings.owner_role}
+              </p>
               <p className="text-slate-300 italic">"{settings.owner_bio}"</p>
             </div>
           </div>
@@ -26,8 +33,12 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-slate-700 pb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">{settings?.company_name || 'Jumba Glass'}</h3>
-            <p className="text-slate-400">Premium glass fabrication solutions tailored for Kenyan homes and businesses.</p>
+            <h3 className="text-xl font-bold mb-4">
+              {settings?.company_name || 'Jumba Glass'}
+            </h3>
+            <p className="text-slate-400">
+              Premium glass fabrication solutions tailored for Kenyan homes and businesses.
+            </p>
           </div>
           <div>
             <h4 className="font-bold mb-4">Contact</h4>
@@ -40,9 +51,31 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Links</h4>
             <ul className="text-slate-400 space-y-2">
-              <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
-              <li><Link href="/gallery" className="hover:text-primary transition-colors">Portfolio</Link></li>
-              <li><Link href="/admin/login" className="hover:text-primary transition-colors">Admin Login</Link></li>
+              <li>
+                <Link href="/services" className="hover:text-primary transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/gallery" className="hover:text-primary transition-colors">
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy-policy" className="hover:text-primary transition-colors text-sm">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="hover:text-primary transition-colors text-sm">
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link href="/admin/login" className="hover:text-primary transition-colors">
+                  Admin Login
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -51,7 +84,9 @@ export default function Footer() {
           <p>&copy; {new Date().getFullYear()} {settings?.company_name}. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex items-center gap-2">
             <span>Built by</span>
-            <span className="bg-slate-900 border border-slate-700 px-3 py-1 rounded-full text-primary font-bold">NYXUS DEV LABS</span>
+            <span className="bg-slate-900 border border-slate-700 px-3 py-1 rounded-full text-primary font-bold">
+              NYXUS DEV LABS
+            </span>
           </div>
         </div>
       </div>
